@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "cat_rent",
+      "name": "Rent / Mortgage",
+      "color": "#89b4fa",
+      "icon": "home",
+      "budget_limit": 1500.00,
+      "budget_period": "monthly",
+      "bucket": "needs",
+      "active": true,
+      "sort_order": 1
+    },
+    {
+      "id": "cat_utilities",
+      "name": "Utilities",
+      "color": "#74c7ec",
+      "icon": "bolt",
+      "budget_limit": 150.00,
+      "budget_period": "monthly",
+      "bucket": "needs",
+      "active": true,
+      "sort_order": 2
+    },
+    {
+      "id": "cat_groceries",
+      "name": "Groceries",
+      "color": "#a6e3a1",
+      "icon": "cart",
+      "budget_limit": 400.00,
+      "budget_period": "monthly",
+      "bucket": "needs",
+      "active": true,
+      "sort_order": 3
+    },
+    {
+      "id": "cat_transportation",
+      "name": "Transportation",
+      "color": "#fab387",
+      "icon": "car",
+      "budget_limit": 200.00,
+      "budget_period": "monthly",
+      "bucket": "needs",
+      "active": true,
+      "sort_order": 4
+    },
+    {
+      "id": "cat_healthcare",
+      "name": "Healthcare",
+      "color": "#f38ba8",
+      "icon": "heart",
+      "budget_limit": 100.00,
+      "budget_period": "monthly",
+      "bucket": "needs",
+      "active": true,
+      "sort_order": 5
+    },
+    {
+      "id": "cat_insurance",
+      "name": "Insurance",
+      "color": "#cba6f7",
+      "icon": "shield",
+      "budget_limit": 150.00,
+      "budget_period": "monthly",
+      "bucket": "needs",
+      "active": true,
+      "sort_order": 6
+    },
+    {
+      "id": "cat_dining",
+      "name": "Dining Out",
+      "color": "#f9e2af",
+      "icon": "fork",
+      "budget_limit": 200.00,
+      "budget_period": "monthly",
+      "bucket": "wants",
+      "active": true,
+      "sort_order": 7
+    },
+    {
+      "id": "cat_entertainment",
+      "name": "Entertainment",
+      "color": "#94e2d5",
+      "icon": "star",
+      "budget_limit": 100.00,
+      "budget_period": "monthly",
+      "bucket": "wants",
+      "active": true,
+      "sort_order": 8
+    },
+    {
+      "id": "cat_shopping",
+      "name": "Shopping",
+      "color": "#f5c2e7",
+      "icon": "bag",
+      "budget_limit": 150.00,
+      "budget_period": "monthly",
+      "bucket": "wants",
+      "active": true,
+      "sort_order": 9
+    },
+    {
+      "id": "cat_subscriptions",
+      "name": "Subscriptions",
+      "color": "#b4befe",
+      "icon": "repeat",
+      "budget_limit": 50.00,
+      "budget_period": "monthly",
+      "bucket": "wants",
+      "active": true,
+      "sort_order": 10
+    },
+    {
+      "id": "cat_savings_transfer",
+      "name": "Savings Transfer",
+      "color": "#a6e3a1",
+      "icon": "piggy",
+      "budget_limit": 0.00,
+      "budget_period": "monthly",
+      "bucket": "savings",
+      "active": true,
+      "sort_order": 11
+    },
+    {
+      "id": "cat_emergency_fund",
+      "name": "Emergency Fund",
+      "color": "#89dceb",
+      "icon": "safe",
+      "budget_limit": 0.00,
+      "budget_period": "monthly",
+      "bucket": "savings",
+      "active": true,
+      "sort_order": 12
+    },
+    {
+      "id": "cat_income",
+      "name": "Income",
+      "color": "#a6e3a1",
+      "icon": "money",
+      "budget_limit": 0.00,
+      "budget_period": "monthly",
+      "bucket": "",
+      "active": true,
+      "sort_order": 13
+    },
+    {
+      "id": "cat_other",
+      "name": "Other",
+      "color": "#6c7086",
+      "icon": "tag",
+      "budget_limit": 0.00,
+      "budget_period": "monthly",
+      "bucket": "",
+      "active": true,
+      "sort_order": 14
+    }
+  ]
+}
