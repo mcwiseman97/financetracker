@@ -133,8 +133,7 @@ class GraphsPanel(BasePanel):
                color=colors[1], alpha=0.85)
         ax.bar([xi + width/2 for xi in x], expenses, width, label="Expenses",
                color=colors[5], alpha=0.85)
-        ax.set_xticks(list(x))
-        ax.set_xticklabels(months, rotation=30, ha="right", fontsize=9)
+        ax.set_xticks(list(x), labels=months, rotation=30, ha="right", fontsize=9)
         ax.set_ylabel("Amount")
         ax.set_title("Monthly Income vs Expenses")
         ax.legend(fontsize=9)
@@ -188,7 +187,7 @@ class GraphsPanel(BasePanel):
         ax.set_xlabel("Month")
         ax.set_ylabel("Net (Income − Expenses)")
         ax.set_title("Net Cash Flow")
-        ax.set_xticklabels(months, rotation=30, ha="right", fontsize=9)
+        ax.set_xticks(range(len(months)), labels=months, rotation=30, ha="right", fontsize=9)
         self._apply_ax_style(ax, style)
         self._ive_canvas.draw()
 
@@ -211,7 +210,7 @@ class GraphsPanel(BasePanel):
         ax.set_ylabel("Amount")
         ax.set_title("Income & Expense Trend")
         ax.legend(fontsize=9)
-        ax.set_xticklabels(months, rotation=30, ha="right", fontsize=9)
+        ax.set_xticks(range(len(months)), labels=months, rotation=30, ha="right", fontsize=9)
         self._apply_ax_style(ax, style)
         self._trend_canvas.draw()
 
