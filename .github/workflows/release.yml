@@ -1,0 +1,72 @@
+name: Build & Release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build-linux:
+    name: Build Linux binary
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libgl1 libglib2.0-0 libdbus-1-3 \
+            libxcb-cursor0 libxcb-icccm4 libxcb-image0 \
+            libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 \
+            libxcb-shape0 libxcb-xinerama0 libxcb-xkb1 \
+            libxkbcommon-x11-0 libfontconfig1
+
+      - name: Install Python dependencies
+        run: |
+          pip install pyinstaller python-dateutil babel matplotlib PyQt6
+
+      - name: Build
+        run: pyinstaller financetracker.spec --noconfirm
+
+      - name: Package
+        run: |
+          cd dist
+          tar -czf financetracker-linux-x86_64.tar.gz financetracker
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/financetracker-linux-x86_64.tar.gz
+
+  build-windows:
+    name: Build Windows executable
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install pyinstaller python-dateutil babel matplotlib PyQt6
+
+      - name: Build
+        run: pyinstaller financetracker.spec --noconfirm
+
+      - name: Package
+        run: |
+          cd dist
+          Compress-Archive -Path financetracker.exe -DestinationPath financetracker-windows-x86_64.zip
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/financetracker-windows-x86_64.zip
